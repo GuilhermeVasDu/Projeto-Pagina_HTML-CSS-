@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme_Vasconcelos_Duarte</title>
+    
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #f4f6f9;
+    color: #333;
+}
+
+
+header {
+    background: linear-gradient(90deg, #1505a5, #182848);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navegacao .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.navegacao .menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navegacao .menu li a:hover {
+    color: #57d8ff;
+    text-decoration: underline;
+}
+
+
+.cabecalho {
+    margin-top: 0; 
+    text-align: center;
+    background: #3e4af8; 
+    padding: 30px 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.cabecalho h1 {
+    margin-top: 15px;
+    font-size: 2rem;
+    color: #0a0a0a;
+}
+
+.fotoperfil {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #57caff;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+
+main section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #182848;
+    position: relative;
+}
+
+main h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #4b6cb7;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.sobrem {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sobrem h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #182848;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.sobrem h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #4b6cb7;
+    margin: 10px auto 0;
+    border-radius: 3px;
+}
+
+.sobrem p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #182848;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+
+
+.skills-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.skill-bar {
+    background: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 25px;
+    position: relative;
+}
+
+.skill-level {
+    background: linear-gradient(90deg, #4b6cb7, #013750);
+    height: 100%;
+    text-align: right;
+    padding-right: 10px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.hardSkill .card {
+    background: transparent;
+    box-shadow: none;
+}
+
+.hardSkill .card img {
+    max-width: 120px;
+    max-height: 120px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+
+.contatos a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.email {
+    background: #d93025;
+    color: white;
+}
+
+.github {
+    background: #333;
+    color: white;
+}
+
+.whatsapp{
+    background: #25d366;
+    color: white;
+}
+
+.contatos a:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+
+footer {
+    background: #182848;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+
+
+</style>
+</head>
+<body>
+    <header id="inicio">
+        <div>
+            <nav class="navegacao">
+                <ul class="menu">
+                    <li><a href="#sobrem">Sobre Mim</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#softSkill">Soft Skills</a></li>
+                    <li><a href="#hardSkill">Hard Skills</a></li>
+                    <li><a href="#contatos">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+       
+        <section class="cabecalho">
+            <img src="https://i.redd.it/719nlfp2pqma1.jpg" alt="Riolo_codando" class="fotoperfil">
+            <h1>Guilherme Vasconcelos Duarte</h1>
+        </section>
+
+        <section id="sobrem" class="sobrem">
+            <h2>Sobre Mim</h2>
+            <p>Sou estudante de Análise e Desenvolvimento de Sistemas na Faculdade CDL, apaixonado por tecnologia e pelo impacto que ela pode gerar no dia a dia das pessoas. Tenho interesse em desenvolvimento de software, banco de dados e soluções voltadas para a inovação, sempre buscando aprender novas ferramentas e linguagens de programação. Meu objetivo é construir uma carreira sólida na área de TI, contribuindo para o desenvolvimento de soluções criativas e eficientes que possam agregar valor às empresas e à sociedade.</p>
+
+        </section>
+      
+        <section id="hobbies" class="hobbies">
+            <h2>Meus Hobbies</h2>
+            <div class="cards-container">
+
+                <div class="card">
+                    <img src="https://sempretopgames.com.br/wp-content/uploads/2024/10/Melhores-Jogos-de-Videogames.jpg" alt="Videogames">
+                    <h3>Videogames</h3>
+                    <p>Desde cedo sou apaixonado por todos os tipos de videogames.</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://blog-prd.portalpos.com.br/wp-content/uploads/2021/06/impulsionar-a-carreira-filmes-series.jpg" alt="Filmes e Séries">
+                    <h3>Filmes/Séries</h3>
+                    <p>Adoro assistir filmes e séries, principalmente comédia e ação.</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://elking.com.br/wp-content/uploads/2023/12/rpg-de-mesa.png" alt="RPG">
+                    <h3>RPG</h3>
+                    <p>Sou apaixonado por RPG (Role Playing Game).</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://bananas.mus.br/wp-content/uploads/2024/08/what-is-sonic-branding-feat-901-1024x555.webp" alt="Música">
+                    <h3>Música</h3>
+                    <p>Gosto de ouvir muitos estilos musicais, com preferência em rock e pagode.</p>
+                </div>
+
+            </div>
+        </section>
+
+    
+        <section id="softSkill" class="softSkill">
+            <h2>Soft Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <p class="skill-name">Comunicação</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p class="skill-name">Trabalho em Equipe</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p class="skill-name">Resolução de Problemas</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p class="skill-name">Adaptabilidade</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="hardSkill" class="hardSkill">
+            <h2>Hard Skills</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C/C++">
+                    <h3>C/C++</h3>
+                    <p>Conhecimento em lógica de programação e desenvolvimento de sistemas.</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/2560px-CSS3_and_HTML5_logos_and_wordmarks.svg.png" alt="HTML/CSS" height="200">
+                    <h3>HTML/CSS</h3>
+                    <p>Construção de páginas web modernas e responsivas.</p>
+                </div>
+                <div class="card">
+                    <img src="https://quantumzeitgeist.com/wp-content/uploads/pythoned.png" alt="Python">
+                    <h3>Python</h3>
+                    <p>Automação, análise de dados e desenvolvimento de aplicações.</p>
+                </div>
+            </div>
+        </section>
+
+      
+        <section id="contatos" class="contatos">
+            <h2>Contatos</h2>
+            <a href="mailto:vasconcelosguilherme@gmail.com" target="_blank" class="email">Email</a>
+            <a href="https://wa.me/55985430388" target="_blank" class="whatsapp">WhatsApp</a>
+            <a href="https://github.com/GuilhermeVasDu" target="_blank" class="github">GitHub</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Guilherme Vasconcelos Duarte. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
